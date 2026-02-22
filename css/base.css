@@ -1,0 +1,27 @@
+.card {
+    height: 90%;
+    border-width: 5px;
+}
+
+.card img {
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+
+main h1 {
+    margin-top: 8rem;
+}
+
+.create-deck {
+    border-style: dotted;
+}
+
+footer {
+    margin-top: 8rem;
+}
+
+footer h3 {
+    margin-top: 1rem;
+}
