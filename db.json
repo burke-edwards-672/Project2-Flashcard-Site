@@ -1,1 +1,30 @@
-{}
+{
+    "decks": [
+        {
+            "id": "1",
+            "name": "geometry",
+            "description": "yada yada yada triangles. Nuff said",
+            "questions": [
+                {
+                    "front": "How many sides on a triangle?",
+                    "back": "3"
+                },
+                {
+                    "front": "How many sides on a rectangle?",
+                    "back": "4"
+                },
+                {
+                    "front": "How many sides on a line?",
+                    "back": "2, arguably"
+                }
+            ]
+
+        }
+    ],
+
+    "settings": {
+        "dark_mode": "off",
+        "initial_side": "front"
+    }
+
+}
