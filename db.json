@@ -2,29 +2,153 @@
     "decks": [
         {
             "id": "1",
+            "category": "math",
             "name": "geometry",
-            "description": "yada yada yada triangles. Nuff said",
+            "description": "Some simple questions about the number of sides on polygons.",
             "questions": [
                 {
                     "front": "How many sides on a triangle?",
-                    "back": "3"
+                    "back": "3",
+                    "star": false
                 },
                 {
                     "front": "How many sides on a rectangle?",
-                    "back": "4"
+                    "back": "4",
+                    "star": false
                 },
                 {
                     "front": "How many sides on a line?",
-                    "back": "2, arguably"
+                    "back": "2, maybe.",
+                    "star": false
+                }
+            ]
+
+        },
+        {
+            "id": "2",
+            "category": "science",
+            "name": "planets",
+            "description": "One question for each of the eight (sorry Pluto) planets in our solar system.",
+            "questions": [
+                {
+                    "front": "A runaway greenhouse effect has made this planet unimaginably hot. It's known as Earth's sister planet.",
+                    "back": "Venus",
+                    "star": false
+                },
+                {
+                    "front": "This planet is closest to the sun, and is named after the messenger of the Olympians.",
+                    "back": "Mercury",
+                    "star": false
+                },
+                {
+                    "front": "We live here.",
+                    "back": "Earth",
+                    "star": false
+                },
+                {
+                    "front": "This planet is red and boasts the largest mountain in the solar system.",
+                    "back": "Mars",
+                    "star": false
+                },
+                {
+                    "front": "The largest planet, featuring a storm that's thrice the size of Earth and a 200-year-old stormy red dot.",
+                    "back": "Jupiter",
+                    "star": false
+                },
+                {
+                    "front": "This planet's enormous rings are 99% of why people like it so much.",
+                    "back": "Saturn",
+                    "star": false
+                },
+                {
+                    "front": "This planet is blue, featuers a small ring, and is essentially sideways.",
+                    "back": "Uranus",
+                    "star": false
+                },
+                {
+                    "front": "The farthest planet from the Sun, named after the Roman god of the sea (also the god of horses, believe it or not).",
+                    "back": "Neptune",
+                    "star": false
+                }
+            ]
+
+        },
+        {
+            "id": "3",
+            "category": "video games",
+            "name": "minecraft blocks",
+            "description": "A handful of blocks from Minecraft. The correct answers are the ways to obtain these blocks in survival mode.",
+            "questions": [
+                {
+                    "front": "How do I get a block of diamond ore?",
+                    "back": "Mine diamond ore with a silk touch pickaxe",
+                    "star": false
+                },
+                {
+                    "front": "What do I need to craft an enchanting table?",
+                    "back": "Four obsidian, two diamonds, and a book.",
+                    "star": false
+                },
+                {
+                    "front": "How do I craft diorite? I can mine it naturally, sure, but that's not important right now!",
+                    "back": "Two cobblestone and two pieces of quartz",
+                    "star": false
+                },
+                {
+                    "front": "How can I get gilded blackstone?",
+                    "back": "Mine it with silk touch from a bastion in the nether.",
+                    "star": false
+                },
+                {
+                    "front": "Where can I find wet sponge?",
+                    "back": "In an ocean monument, although sometimes they can generate without it.",
+                    "star": false
+                }
+            ]
+
+        },
+        {
+            "id": "4",
+            "category": "video games",
+            "name": "spelunky 2 worlds",
+            "description": "Definitely not as popular as Minecraft, but I love this game a ton! These questions will present a fact or something, and ask for the relevant in-game location.",
+            "questions": [
+                {
+                    "front": "I'm a horned lizard. Excluding the Cosmic Ocean, where am I?",
+                    "back": "Dwelling",
+                    "star": false
+                },
+                {
+                    "front": "I'm Osiris. Where am I?",
+                    "back": "Duat",
+                    "star": false
+                },
+                {
+                    "front": "I'm a proto-shopkeeper. Where am I?",
+                    "back": "Mothership",
+                    "star": false
                 }
             ]
 
         }
     ],
 
-    "settings": {
-        "dark_mode": "off",
-        "initial_side": "front"
-    }
+    "metadata": [{
+        "id": "1",
+        "recentIds": [
+            "1",
+            "2",
+            "3"
+        ],
+        "current-id": "1"
+    }],
+
+    "defaults": [{
+        "id": "1",
+        "light-mode": true,
+        "front-side-first": true,
+        "shuffled": true,
+        "starred-only": true
+    }]
 
 }
