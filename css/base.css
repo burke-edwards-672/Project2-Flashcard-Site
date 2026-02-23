@@ -38,10 +38,6 @@ header {
     
 }
 
-.create-deck {
-    border-style: dotted;
-}
-
 .transition-color-footer {
     background-color: rgb(237, 232, 255);
     height: 56px;
@@ -56,22 +52,38 @@ footer h3 {
     margin-top: 1rem;
 }
 
-.deck img {
-    width: 50%;
+.deck-icon {
+    height: 80%
 }
 
 .deck {
     border-style: solid;
     border-width: 5px !important; /* Overriding the !important from bootstrap, which also affects border style and color */
+    border-color: rgb(0, 0, 0, 0.15) !important;
     border-radius: 5px;
-    margin: 20px;
+    margin: 50px 20px;
+    background-image: url("../images/lav-stripe.jpg");
 }
 
-.pagetop{
+.middle {
+    display: flex;
+    align-items: center;
+}
+
+.pagetop {
     display: flex;
 }
 
 .pagetop img {
     margin: 10px;
     height: 5rem;
+}
+
+.deck button {
+    display: flex;
+    justify-content: right;
+}
+
+.deck button:hover {
+    transform: scale(1.1);
 }
