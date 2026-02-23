@@ -1,3 +1,7 @@
 .create-deck {
     border-style: dotted;
 }
+
+.navbar {
+    background-color: rgb(255, 247, 192);
+}

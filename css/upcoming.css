@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(73, 71, 95);
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(170, 183, 255);
+}
+
+.navbar {
+    background-color: rgb(237, 232, 255);
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0px;
+    color: rgb(255, 247, 192);
+}
+
+main h3 {
+    margin: 20px;
+    padding-top: 50px;
+    color: rgb(255, 247, 192);
+}
+
+main p {
+    margin: 20px;
+    color: rgb(255, 215, 165);
+    max-width: 50rem;
+}
+
+hr {
+    border-color: rgb(255, 247, 192);
+}

@@ -4,11 +4,12 @@ body {
     font-style: normal;
 }
 
+p, a, li {
+    font-size: 1.2rem;
+}
+
 header {
     background-color: rgb(255, 215, 165);
-}
-.navbar {
-    background-color: rgb(255, 247, 192);
 }
 
 .scribbly {
