@@ -1,6 +1,34 @@
+body {
+    font-family: "Boogaloo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    background-color: rgb(255, 215, 165);
+}
+.navbar {
+    background-color: rgb(255, 247, 192);
+}
+
+.scribbly {
+  font-family: "Mansalva", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .card {
     height: 90%;
     border-width: 5px;
+    background-image: url("../images/peach-stripe.jpg")
+}
+
+.day .card {
+    background-image: url("../images/peach-stripe.jpg")
+}
+
+.night .card {
+    background-image: url("../images/lav-stripe.jpg")
 }
 
 .card img {
@@ -10,18 +38,40 @@
     
 }
 
-main h1 {
-    margin-top: 8rem;
-}
-
 .create-deck {
     border-style: dotted;
 }
 
+.transition-color-footer {
+    background-color: rgb(237, 232, 255);
+    height: 56px;
+}
+
 footer {
     margin-top: 8rem;
+    background-color: rgb(170, 183, 255);
 }
 
 footer h3 {
     margin-top: 1rem;
+}
+
+.deck img {
+    width: 50%;
+}
+
+.deck {
+    border-style: solid;
+    border-width: 5px !important; /* Overriding the !important from bootstrap, which also affects border style and color */
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.pagetop{
+    display: flex;
+}
+
+.pagetop img {
+    margin: 10px;
+    height: 5rem;
 }
