@@ -106,16 +106,31 @@ async function putNewMetadata(meta) {
     });
 }
 
+function navigate(e) {
+    if (e.target.title === "edit") {
+        window.alert("Sorry! This hasn't been added yet.");
+
+    } else if (e.target.title === "delete") {
+        window.alert("Sorry! This hasn't been added yet.");
+
+    } else {
+        window.location.href = "./deck.html";
+    }
+}
+
 //handling user clicking on a deck
 const deckContainer = document.querySelector("#js-decks");
 deckContainer.addEventListener("click", async (e) => {
 
     const deckID = getParentDeckID(e.target);
-    const metadata = await getMetadata();
 
-    newMetadata = updateMetadata(deckID, metadata[0]);
-    putNewMetadata(newMetadata);
+    if (deckID === "new-deck") {
+        window.alert("Sorry! This hasn't been added yet.");
+    } else if (deckID) {
+        const metadata = await getMetadata();
+        newMetadata = updateMetadata(deckID, metadata[0]);
+        putNewMetadata(newMetadata);
 
-    window.location.href = "./deck.html";
-
+        navigate(e);
+    }
 })
