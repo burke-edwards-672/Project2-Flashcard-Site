@@ -21,15 +21,20 @@ header {
 .card {
     height: 90%;
     border-width: 5px;
-    background-image: url("../images/peach-stripe.jpg")
+    background-image: url("../images/peach-stripe.jpg");
+    transition-duration: 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .day .card {
-    background-image: url("../images/peach-stripe.jpg")
+    background-image: url("../images/peach-stripe.jpg");
 }
 
 .night .card {
-    background-image: url("../images/lav-stripe.jpg")
+    background-image: url("../images/lav-stripe.jpg");
 }
 
 .card img {
@@ -63,7 +68,13 @@ footer h3 {
     border-color: rgb(0, 0, 0, 0.15) !important;
     border-radius: 5px;
     margin: 50px 20px;
+    transition-duration: 0.4s;
     background-image: url("../images/lav-stripe.jpg");
+}
+
+.deck:hover {
+    background-color: rgb(200, 200, 200);
+    background-blend-mode: screen;
 }
 
 .middle {
