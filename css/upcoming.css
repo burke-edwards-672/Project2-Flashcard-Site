@@ -36,3 +36,7 @@ main p {
 hr {
     border-color: rgb(255, 247, 192);
 }
+
+main li {
+    color: rgb(255, 215, 165)
+}

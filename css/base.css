@@ -45,8 +45,8 @@ header {
 }
 
 footer {
-    margin-top: 8rem;
     background-color: rgb(170, 183, 255);
+    margin-top: 8rem;
 }
 
 footer h3 {
