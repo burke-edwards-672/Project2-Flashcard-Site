@@ -90,7 +90,7 @@ function updateMetadata(recentID, meta) {
 
     newData = {
         recentIds: newRecents,
-        currendId: recentID
+        currentId: recentID
     };
 
     return newData;
@@ -115,5 +115,7 @@ deckContainer.addEventListener("click", async (e) => {
 
     newMetadata = updateMetadata(deckID, metadata[0]);
     putNewMetadata(newMetadata);
+
+    window.location.href = "./deck.html";
 
 })

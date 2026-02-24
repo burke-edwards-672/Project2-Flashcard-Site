@@ -11,7 +11,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/decks.css">
+    <link rel="stylesheet" href="../css/deck.css">
 </head>
 <body>
     <header>
@@ -32,7 +32,7 @@
                             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true" href="#">Decks</a>
+                            <a class="nav-link active" href="./decks.html">Decks</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="./upcoming.html">Coming Soon</a>
@@ -44,36 +44,23 @@
     </header>
 
     <main>
-        <a href="./deck.html">Temporary link to deck</a>
+        <h1 id="name">Deck Name</h1>
+        <h2 id="desc">Deck description goes here and it's super long and cool.</h2>
 
-        <div id="js-decks" class="container px-0">
-            <div class="row deck border create-deck">
-                <div class="col-md-4 middle">
-                    <img src="../images/Plus.jpg" class="deck-icon">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1>Loading...</h1>
                 </div>
-                <div class="col-md-3 middle">
-                    <h3>New Deck</h3>
-                </div>
-                <div class="col-md-5">
-                    
+                <div class="flip-card-back">
+                    <h1>Loading...</h1>
                 </div>
             </div>
+        </div>
 
-            <div id="placeholder" class="row deck border">
-                <div class="col-md-4 middle">
-                    <img src="../images/smile.jpg" class="deck-icon">
-                </div>
-                <div class="col-md-3 middle">
-                    <h3>Sample Deck 1</h3>
-                </div>
-                <div class="col-md-4 middle">
-                    <p>Sample deck 1 description. Lorem lorem forum forum</p>
-                </div>
-                <div class="col-md-1 p-0 btn-group-vertical" role="group" aria-label="Vertical button group">
-                    <button type="button" class="btn"><img src="../images/edit.png" height="50" title="edit"></button>
-                    <button type="button" class="btn"><img src="../images/delete.png" height="50" title="delete"></button>
-                </div>
-            </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button id="left" type="button" class="btn btn-primary">Left</button>
+            <button id="right" type="button" class="btn btn-primary">Right</button>
         </div>
     </main>
 
@@ -120,6 +107,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="../js/decks.js"></script>
+    <script src="../js/deck.js"></script>
 </body>
 </html>
