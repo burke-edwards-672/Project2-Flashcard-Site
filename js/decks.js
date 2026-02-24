@@ -37,7 +37,7 @@ function createHTML(deck) {
 
     row.innerHTML = `
         <div class="col-md-4 middle">
-            <img src="../images/smile.jpg" class="deck-icon">
+            <img src="../images/fonty/smile.jpg" class="deck-icon">
         </div>
         <div class="col-md-3 middle">
             <h3>${deck_name}</h3>
@@ -46,8 +46,8 @@ function createHTML(deck) {
             <p>${deck_desc}</p>
         </div>
         <div class="col-md-1 p-0 btn-group-vertical" role="group" aria-label="Vertical button group">
-            <button type="button" class="btn"><img src="../images/edit.png" height="50" title="edit"></button>
-            <button type="button" class="btn"><img src="../images/delete.png" height="50" title="delete"></button>
+            <button type="button" class="btn"><img src="../images/icons/edit.png" height="50" title="edit"></button>
+            <button type="button" class="btn"><img src="../images/icons/delete.png" height="50" title="delete"></button>
         </div>
     `;
 

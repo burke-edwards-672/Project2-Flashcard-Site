@@ -50,7 +50,7 @@ function createHTML(deck) {
 
     column.innerHTML = `
         <div id=${deck_id} class="card m-2">
-            <img src="./images/smile.jpg" >
+            <img src="./images/fonty/smile.jpg" >
             <h3 class="card-title my-3">${deck_name}</h3>
         </div>
     `;
