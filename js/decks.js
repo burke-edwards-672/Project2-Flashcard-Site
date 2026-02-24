@@ -3,9 +3,9 @@
 
 //Borrowing Frank's DOM-is-loaded checker verbatim.
 document.addEventListener("DOMContentLoaded", () => {
-    const recentsRow = document.querySelector("#js-decks");
+    const recentsCol = document.querySelector("#js-decks");
 
-    if (!recentsRow) return;
+    if (!recentsCol) return;
 
     init();
 })
@@ -128,7 +128,7 @@ deckContainer.addEventListener("click", async (e) => {
         window.alert("Sorry! This hasn't been added yet.");
     } else if (deckID) {
         const metadata = await getMetadata();
-        newMetadata = updateMetadata(deckID, metadata[0]);
+        const newMetadata = updateMetadata(deckID, metadata[0]);
         putNewMetadata(newMetadata);
 
         navigate(e);
