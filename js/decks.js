@@ -33,7 +33,7 @@ function createHTML(deck) {
     const deck_desc = deck.description;
 
     row.setAttribute("class", "row deck border");
-    row.setAttribute("id", "deck-" + deck_id);
+    row.setAttribute("id", deck_id);
 
     row.innerHTML = `
         <div class="col-md-4 middle">
@@ -46,14 +46,74 @@ function createHTML(deck) {
             <p>${deck_desc}</p>
         </div>
         <div class="col-md-1 p-0 btn-group-vertical" role="group" aria-label="Vertical button group">
-            <button type="button" class="btn"><img src="../images/edit.png" height="50"></button>
-            <button type="button" class="btn"><img src="../images/delete.png" height="50"></button>
+            <button type="button" class="btn"><img src="../images/edit.png" height="50" title="edit"></button>
+            <button type="button" class="btn"><img src="../images/delete.png" height="50" title="delete"></button>
         </div>
     `;
 
     deckContainer.appendChild(row);
-
-
-
 }
 
+function getParentDeckID (element) {
+    const classArray = Object.values(element.classList);
+
+    if (classArray.includes("row")) {
+        return element.id;
+
+    } else if (element.nodeName === "BODY") {
+        console.log("Oops! Wasn't able to find that ID.")
+        return null;
+
+    } else {
+        return getParentDeckID(element.parentNode);
+    }
+}
+
+async function getMetadata() {
+    const metadata_res = await fetch("http://localhost:3000/metadata");
+    if (!metadata_res.ok) throw new Error("Something went wrong while fetching from metadata");
+    return metadata_res.json();
+}
+
+function updateMetadata(recentID, meta) {
+    const newRecents = meta.recentIds;
+
+    if (newRecents.includes(recentID)) {
+        idIndex = newRecents.indexOf(recentID);
+        newRecents.splice(idIndex, 1);
+        newRecents.unshift(recentID)
+
+    } else {
+        newRecents.unshift(recentID);
+        newRecents.pop();
+    }
+
+    newData = {
+        recentIds: newRecents,
+        currendId: recentID
+    };
+
+    return newData;
+}
+
+async function putNewMetadata(meta) {
+    await fetch("http://localhost:3000/metadata/1", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(meta)
+    });
+}
+
+//handling user clicking on a deck
+const deckContainer = document.querySelector("#js-decks");
+deckContainer.addEventListener("click", async (e) => {
+
+    const deckID = getParentDeckID(e.target);
+    const metadata = await getMetadata();
+
+    newMetadata = updateMetadata(deckID, metadata[0]);
+    putNewMetadata(newMetadata);
+
+})

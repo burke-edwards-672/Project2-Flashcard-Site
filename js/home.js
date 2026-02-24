@@ -15,6 +15,8 @@ async function init() {
     const metadata = await getMetadata();
 
     const recent_ids = metadata[0].recentIds;
+    console.log(recent_ids);
+    console.log(decks);
 
     createDecks(decks, recent_ids);
 }
