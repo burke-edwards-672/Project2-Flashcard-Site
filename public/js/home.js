@@ -114,7 +114,7 @@ recentsRow.addEventListener("click", async (e) => {
         const newMetadata = updateMetadata(deckID, metaGlobal.metadata);
         putNewMetadata(newMetadata);
 
-        window.location.href = "../html/deck.html";
+        window.location.href = "./html/deck.html";
     }
 });
 

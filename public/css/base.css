@@ -99,3 +99,11 @@ footer h3 {
 .deck button:hover {
     transform: scale(1.1);
 }
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
